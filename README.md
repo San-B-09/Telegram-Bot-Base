@@ -1,2 +1,2 @@
-# Telegram Paper Downloader Bot
-This repo containts implementation of paper downloading telegram bot
+# Telegram Base Bot
+This repo containts base code for building any telegram bot
