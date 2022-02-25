@@ -4,11 +4,11 @@ from decouple import config
 
 API_KEY = config('API_KEY')
 USER_NAME = config('BOT_USER_NAME')
-HEROKU_URL = config('HEROKU_URL')
-downloadedPDFs = []
+URL = config('URL')
 
 bot = telegram.Bot(token=API_KEY)
 
+# start the flask app
 app = Flask(__name__)
 
 
@@ -27,7 +27,13 @@ def respond():
     text = (update.message.text.encode('utf-8').decode()).lower()
 
     # the first time you chat with the bot AKA the welcoming message
-    if "hi" in text:
+    if '/start' in text:
+        bot_welcome = """
+        Hi, I'm the base bot.\nWanna know more about my source code ??\nHop onto this link: https://github.com/San-B-09/Telegram-Bot-Base
+        """
+        bot.sendMessage(chat_id=chat_id, text=bot_welcome,
+                        reply_to_message_id=msg_id)
+    elif "hi" in text:
         bot_welcome = """
         Welcome to Base Bot. 
         """
@@ -46,7 +52,7 @@ def respond():
 
 @app.route('/set_webhook', methods=['GET', 'POST'])
 def set_webhook():
-   s = bot.setWebhook('{URL}{HOOK}'.format(URL=HEROKU_URL, HOOK=API_KEY))
+   s = bot.setWebhook('{URL}{HOOK}'.format(URL=URL, HOOK=API_KEY))
    if s:
        return "webhook setup ok"
    else:
