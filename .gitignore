@@ -109,8 +109,8 @@ ENV/
 env.bak/
 venv.bak/
 
-.env
-botEnv/
+# .env
+# botEnv/
 
 # Spyder project settings
 .spyderproject
