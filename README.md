@@ -1,6 +1,8 @@
 # Telegram Base Bot
 This repo containts code for building a base telegram bot. Furthermore, on top of the base bot, you can add your own customization accordingly.
 
+> **Detailed blog for the base bot and steps for hosting the same on Heroku can be find [HERE](https://bijawesanket.medium.com/building-your-first-telegram-bot-cca7490ef60e).**
+
 ## Installation Details
 All the required modules are listed under requirements.txt. Run the following command to install the same:
 ```
@@ -29,3 +31,6 @@ C:\> ngrok http 5000
 Copy the https URL tunneled to localhost to the URL variable of ```.env``` file and Make sure you append ```/``` at the end of URL.
 
 Now run the ```app.py``` file. Then copy the ngrok URL and add to the end of the link ```/setwebhook``` so that the address will be something like ```https://<ngrok code>.ngrok.io/setwebhook```. If you see ```GET /set_webhook 200 OK``` on ngrok’s terminal, that means you are ready to go!
+
+## Go talk to your BOT!
+![Sample Chat](https://github.com/San-B-09/Telegram-Bot-Base/blob/6f25db6308fbfbfa5a2524bae8249f02302f2426/README%20Images/Sample%20Chat.gif)
