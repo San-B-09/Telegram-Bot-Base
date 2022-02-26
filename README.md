@@ -1,7 +1,7 @@
 # Telegram Base Bot
 This repo containts code for building a base telegram bot. Furthermore, on top of the base bot, you can add your own customization accordingly.
 
-> **Detailed blog for the base bot and steps for hosting the same on Heroku can be find [HERE](https://bijawesanket.medium.com/building-your-first-telegram-bot-cca7490ef60e).**
+> **Detailed blog for the base bot and steps for hosting the same on Heroku can be found [HERE](https://bijawesanket.medium.com/building-your-first-telegram-bot-cca7490ef60e).**
 
 ## Installation Details
 All the required modules are listed under requirements.txt. Run the following command to install the same:
